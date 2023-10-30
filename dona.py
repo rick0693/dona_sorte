@@ -98,6 +98,17 @@ def verificar_condicao(api_url):
                 return True  # Condição atendida
             elif cor1 == 2 and cor2 == 2 and cor3 == 2 and cor4 == 2:
                 return True  # Condição atendida       
+            elif cor1 == 2 and cor2 == 1 and cor3 == 2 and cor4 == 1:
+                return True  # Condição atendida      
+            elif cor1 == 1 and cor2 == 2 and cor3 == 1 and cor4 == 2:
+                return True  # Condição atendida      
+            
+            elif cor1 == 1 and cor2 == 1 and cor3 == 2 and cor4 == 2:
+                return True  # Condição atendida      
+            elif cor1 == 2 and cor2 == 2 and cor3 == 1 and cor4 == 1:
+                return True  # Condição atendida      
+            elif cor1 ==0  and cor2 == 0 and cor3 == 1 and cor4 == 0:
+                return True  # Condição atendida      
 
             else:
                 print("Aguardando condição. Verifique se a condição foi atendida.")
