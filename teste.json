@@ -1,0 +1,10 @@
+{
+  "email": "rick0693@gmail.com",
+  "senha": "Ric@rdo06@Sara",
+  "valor_inicial": 0.1,
+  "escolha_estrategia": 1,
+  "numero_vitorias_desejado": 1,
+  "numero_alerta_derrotas": 4,
+  "opcao_alerta_derrota_index": 1,
+  "opcao_alerta_vitoria_index": 1
+}
