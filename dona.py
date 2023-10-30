@@ -5,7 +5,6 @@ import time
 import json
 import sqlite3
 import streamlit as st
-import pygame   
 from collections import Counter
 
 
@@ -520,16 +519,10 @@ if st.button("Iniciar", key="iniciar_button"):
                         if opcao_alerta_vitoria == "Alertar e Desligar":
                             st.toast('Ganhamos', icon='🚀')
                             st.warning(f"Alerta sonoro ativado! Número desejado de vitórias alcançado. Desligando o código.", icon='🚀')
-                            pygame.mixer.init()
-                            pygame.mixer.music.load("fim.mp3")  # Substitua pelo caminho do seu arquivo de som
-                            pygame.mixer.music.play()
+ 
                             desligar = True
 
                     if perdeu_consecutivas_local >= numero_alerta_derrotas:
-                        pygame.mixer.init()
-                        pygame.mixer.music.load("alerta.mp3")  # Substitua pelo caminho do seu arquivo de som
-                        pygame.mixer.music.play()
-
                         if opcao_alerta_derrota == "Alertar e Desligar":
                             st.warning(f"Alerta sonoro ativado! Número desejado de derrotas consecutivas alcançado. Desligando o código.")
                             desligar = True
