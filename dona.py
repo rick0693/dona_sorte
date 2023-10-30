@@ -57,7 +57,6 @@ if uploaded_file is not None and not config_carregadas:
 
 
     desligar = False
-    st.toast('Configurações carregadas!', icon='🚀')
 
 if st.button("Iniciar", key="iniciar_button"):
     st.write("Iniciando o código...")
@@ -304,13 +303,11 @@ if st.button("Iniciar", key="iniciar_button"):
             if len(server_seeds) == 0:
                 server_seeds.append(server_seed)
                 print(f"Primeiro dado obtido: {server_seed}")
-                st.toast('Primeiro dado obtido', icon='🚀')
 
             elif len(server_seeds) == 1:
                 if server_seed != server_seeds[0]:
                     server_seeds.append(server_seed)
                     print(f"Segundo dado obtido: {server_seed}")
-                    st.toast('Segundo dado obtido', icon='🚀')
 
                     time.sleep(28)
                 else:
@@ -352,7 +349,6 @@ if st.button("Iniciar", key="iniciar_button"):
 
                         if penultimo_dica == ultimo_color1:
                             resultado = "Ganhou"
-                            st.toast('Ganhamos', icon='🚀')
 
                             perdeu_consecutivas_local = 0  # Reiniciar contagem de derrotas consecutivas
                             ganhou_consecutivas += 1  
@@ -517,7 +513,6 @@ if st.button("Iniciar", key="iniciar_button"):
 
                     if ganhou_apos_iniciando_count >= numero_vitorias_desejado:
                         if opcao_alerta_vitoria == "Alertar e Desligar":
-                            st.toast('Ganhamos', icon='🚀')
                             st.warning(f"Alerta sonoro ativado! Número desejado de vitórias alcançado. Desligando o código.", icon='🚀')
  
                             desligar = True
