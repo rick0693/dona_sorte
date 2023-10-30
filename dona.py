@@ -101,9 +101,6 @@ def verificar_condicao(api_url):
 
             else:
                 print("Aguardando condição. Verifique se a condição foi atendida.")
-                st.toast("Aguardando condição. Verifique se a condição foi atendida.")
-
-
 
         else:
             # Imprimir uma mensagem de erro se a requisição não foi bem-sucedida
@@ -122,7 +119,8 @@ condicao_atendida = verificar_condicao(api_url)
 
 while not desligar:
     if condicao_atendida:
-        st.toast("Condição atendida. Iniciando o código...")
+    
+        st.write("Condição atendida. Iniciando o código...")
 
         col1, col2, col3, col4 = st.columns(4)
         dica1 = col1.empty() # Indicação
